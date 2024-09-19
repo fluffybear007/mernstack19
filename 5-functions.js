@@ -34,7 +34,7 @@ var myFunc = function (a,b){//unNamed function
     return a*b
 }
 
-console.log(myFunc(5,6))
+console.log(myFunc(5,6));
 
 //3. IIFE - Immediately invocable function expression
 
@@ -50,7 +50,7 @@ function User(name, age, address){
     this.age=age,
     this.address=address;
 
-    this.geteUserDetails= function(){
+    this.getUserDetails= function(){
         console.log("User Information Entered is -", this, name, this.age, this.address)
 
     }
@@ -60,16 +60,16 @@ var userObj = new User("Ben", 20, "Somewhere on earth!!")
 userObj.session = "MERNStack"; //adding new property(this is with the help of prototype)
 
 //overriding the existing definition
-userObj.geteUserDetails =function(){
-    console.group("User Information Entered is - ", this.name, this.age, this.address, this.session)
+userObj.getUserDetails =function(){
+    console.log("User Information Entered is - ", this.name, this.age, this.address, this.session)
 
 }
 
-console.log(userObj.geteUserDetails())
-console.log(User.prototype.getUserDetails())
+console.log(userObj.getUserDetails())
+//console.log(User.prototype.getUserDetails())
 
 var newUserObj = new User("New User", 20, "Somewhere on earth!!")
-console.log(newUserObj.geteUserDetails())
+console.log(newUserObj.getUserDetails())
 
 //5. nested functions
 
@@ -84,3 +84,19 @@ function A(a) {
         }
     }
 }
+
+var objA  = A(5)
+var objB =  objA(5)//B
+var objC = objB(5)//C
+var objD = objC(5)//D
+console.log(objD)
+
+//chain execution of nexted functions
+
+
+
+var result = A(5)(5)(5)(5)
+console.log(result)
+
+
+//give me an example of each type of function
