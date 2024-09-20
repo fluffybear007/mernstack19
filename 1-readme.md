@@ -5,6 +5,9 @@
 4. close terminal: ctrl+c or click X : code still working 
 5. open terminal panel not create new termina: ctrl+ ` or right click the file to open in integrated terminal
 
+git add .
+git commit -m "subsequent commits" 
+git push origin master
 
 Installation of below stuffs needed
 //1. NODEJS
