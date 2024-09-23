@@ -3,7 +3,7 @@
 
 //the callback function keeps holding the scope of the variables or references used in the function
 
-
+//callback function example 1
 function PrintDetails(heading, dataObject){
     console.log(heading, dataObject)
 
@@ -21,6 +21,10 @@ function GetAccountDetails(callBackFunc, data){
 
 GetAccountDetails(PrintDetails, userObj) // using the callback PrintDetails to print user data 
 
+
+
+
+//callback function example 2
 var productObj = {
     ProductName : "Iphone 29",
     Price : "$5000",

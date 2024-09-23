@@ -1,0 +1,23 @@
+
+function AccountBalance(yao, amount){
+    console.log(yao, amount)
+}
+
+var accountObj={
+Balance: 100,
+Id:123
+}
+
+function PrintAccount(callBackFunc, accInfo, name){
+    callBackFunc("The account information is:", accInfo);
+}
+
+PrintAccount(AccountBalance, accountObj);
+
+
+// create a callback function example for account
+// 	1.	PrintAccount details should accept this call back and the account information
+//     2. Upon executing PrintAccntDetails it should show the account details with a message
+// 3. Use the same call back to print multiple sessions planned for the day
+
+// https://github.com/MishraAshish/mernstack19/blob/master/callback.js 
