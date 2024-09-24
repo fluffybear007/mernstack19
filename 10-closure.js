@@ -21,10 +21,12 @@ function Accounts(name, age, balance, type){
         //things returned from this function are public 
         if (pwd == password){
             return {
-                AccName,
+            //short hand from ES6, if variable name (from which we read the value) and key refers to same name
+          
+                AccName,   //"AccName" : AccName 
                 AccHolderAge,
                 AccBalance,
-                AccBalance
+                AccType
             }
         }else {
             return "Password is incorrect!!"
@@ -36,4 +38,14 @@ function Accounts(name, age, balance, type){
 
 var accObj = Accounts("Mark", 21, "$200000", "Credit")
 
-console.log(accObj("Mark", "xyz"))
+// console.log(accObj("Mark", "xyz"))
+
+for(let index=0; index<1000000; index++){
+    //const element =array[index];
+    console.log(index)
+}
+
+console.log("LOOP execute 1000000 times")
+
+console.log(accObj("", "xyz"))
+console.log(accObj("","123"))
