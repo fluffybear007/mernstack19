@@ -1,0 +1,86 @@
+// Object as class, we can create an object with details of key, value pair.
+// An object is the reference pointer holds the value via properties defined inside the object
+// new Object() - instance object, Object. create()
+// {} -this is the object
+
+//1. Using two curly brackets
+var Employee = {
+    Name : "Ben Ma",
+    ID : 2024,
+    GroupCode : "Account Systems",
+    GetEmployeeInfo : function() { // `` -template literal easy way of writing string and its concatenetion
+        return `
+        ${this.Name}
+        ${this.ID}
+        ${this.GroupCode}
+        ${this.Salary}
+        ${this.Tag}
+        `
+    }
+}
+
+//Employee.Salary = "$100000"
+
+//var empObj = new Empoyee();
+console.log(Employee.GetEmployeeInfo())
+
+//use constructor method to create the class - using new keyword
+// this method is not a expected way of inheritance as it keeps the same object and no new copy or clone
+//2. Software Engineer inherits from Employee
+
+var SoftwareEngineer = new Object(Employee)// we are setting/injecting Employee object to create a new class using constructor
+
+console.log(Employee.GetEmployeeInfo())
+console.log(SoftwareEngineer.GetEmployeeInfo)
+
+// The new and more suitable way of implementing inheritance is by using Object.create method where we wil have
+//seperate copy for child class and a prototype chain to link with Parent Class.
+
+var SoftwareEngineer = Object.create(Employee)
+Employee.Salary = "$200000"
+
+SoftwareEngineer.Tag =""
+
+console.log(Employee.GetEmployeeInfo())
+console.log(SoftwareEngineer.GetEmployeeInfo)
+
+SoftwareEngineer.GetEmployeeInfo = function(){
+    return `
+        ${this.Name}
+        ${this.ID}
+        ${this.GroupCode}
+        ${this.Salary}
+        ${this.Tag}
+        `
+}
+//cons
+
+//checking the prototype references
+console.log(Employee._proto_)
+console.log(SoftwareEngineer._proto_)
+
+//4. When object is empty
+var emptyObj ={} //Object.create({})
+
+//5. Null Protorype object
+var nullObj = Object.create(null)
+
+//6. Merging of different object
+
+var User = { name: "Robin", accType : "Credit", userType : "Paid"}
+var Address = {ID : "1234", Current : "Somewhere on earth"}
+var Address2 = {ID : "1234", Delivery: "Somewhere in colorado"}
+
+var DispatchItem = { User, Address, Address2 }
+
+Address2.Mobile = 2112222
+
+console.log(DispatchItem) //this will reflect the changed value even after merge.
+
+//we need to have principle of immutability so that changed value doesn't reflect and data gets merged avoiding.
+//redundancy
+
+var DispatchItem = Object.assign(DispatchItem, User, Address, Address2)
+
+Address2.Mobile =222222
+console.log(DispatchItem)

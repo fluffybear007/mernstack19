@@ -34,7 +34,7 @@ console.log(User2)
 
 //using object to create a behaviour like java classes
 var User3 = {
-    name : "Sierra"
+    name : "Sierra",
     age : 19,
     address: "NYC America",
     getUserDetails : function(){
@@ -45,6 +45,11 @@ var User3 = {
     }
 }
 
-console.log(User3.getUserDetails())
+//console.log(User3.getUserDetails())
 
-//Using Object Literals reduce lines number 6 to 2 
+//Using Object Literals reduce lines number 6 to 2
+
+//to make 
+module.exports = User3
+
+m
