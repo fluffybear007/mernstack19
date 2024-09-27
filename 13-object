@@ -84,3 +84,4 @@ var DispatchItem = Object.assign(DispatchItem, User, Address, Address2)
 
 Address2.Mobile =222222
 console.log(DispatchItem)
+

@@ -1,0 +1,36 @@
+// Questions -
+// Create a Person <few properties and a function to return them> and Inherit it as Student class and override the function
+// Inherit should be done both way's constructor and Object.Create
+// Create three objects and merge their propeties
+// Create a logical example of closure
+// Share few data objects from one file to another
+
+
+
+
+function Person(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender= gender;
+}
+
+Person.prototype.identity = function() {
+    console.log("Basic identity information");
+};
+
+function Student(name, age, gender, grade) {
+    Person.call(this. name);
+    Person.call(this, age);
+    Person.call(this, gender);
+    this.grade = grade;
+}
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+Student.prototype.idendity = function() {
+    console.log("Student's basic information");
+};
+
+const thatStudent = new Student("1st", "2nd");
+thatStudent.identity()
