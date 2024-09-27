@@ -5,7 +5,14 @@
 // Create a logical example of closure
 // Share few data objects from one file to another
 
-
+// Recap - 
+// Objects, Inheritance, Assign, Create
+// Functions, overloading, 
+// Closures
+// Literals
+// callback- nesting
+// hoisting
+// datatype and models 
 
 
 function Person(name, age, gender) {
