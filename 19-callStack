@@ -1,0 +1,49 @@
+// Stack - LIFO, data structure
+
+// callStack - the executing thread allocated some memory to run the interpreter, and works in LIFO fashion
+// this also has the access to heap( for larger chunk of data like objects)
+// less memory, easily available and gives performance
+
+
+var myName = "Some Random Name"
+
+console.log(myName)
+
+function Foo(){
+   // console.log("We are in Foo")
+    // return "Bar"
+    throw new Error("Call Stack");
+}
+
+function Bar(){
+    // console.log("We are in Bar")
+    // return "Bar"
+    Foo()
+}
+
+function Baz(){
+    // console.log("We are in Baz")
+    // return "Baz"
+    Bar()
+}
+
+ //Foo()
+ //Bar()
+Baz()
+
+
+// var i = 1;
+// function Baz() {
+//     //console.log("We are in BAZ")
+//     //return "Baz"
+//     //Bar()
+//     i++
+//     //if (i < 1000) {
+//         console.log(i)
+//         Baz()
+//     //}else{
+//         console.log(i + "we can further call it in recursive order")
+//     //}
+// }
+// // Baz()
+// console.log()

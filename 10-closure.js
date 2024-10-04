@@ -40,10 +40,10 @@ var accObj = Accounts("Mark", 21, "$200000", "Credit")
 
 // console.log(accObj("Mark", "xyz"))
 
-for(let index=0; index<1000000; index++){
-    //const element =array[index];
-    console.log(index)
-}
+// for(let index=0; index<1000000; index++){
+//     //const element =array[index];
+//     console.log(index)
+// }
 
 console.log("LOOP execute 1000000 times")
 

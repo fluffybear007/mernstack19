@@ -63,6 +63,11 @@ var num = -32767
  doaddition(2.3,3)//5.3
  doaddition("first", 2, "three")//error
 
+ //5.
+ // A closure is the combination of a function bundled together(enclosed) with references to its surrounding state. 
+ // When you create a closure, you gain access to an outer function's scope from an inner function. 
+ // Clossures are automatically created every time a function is defined in JavaScript.
+
  //6.
 //the purpose of call apply bind is changing the context. 
 //Apply invokes the function immediately and allows you to pass in arguments as an array. 
