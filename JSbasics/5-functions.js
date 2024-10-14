@@ -100,3 +100,30 @@ console.log(result)
 
 
 //give me an example of each type of function
+
+
+//定义函数，调用函数实现其功能
+function Greet(name){
+    console.log("Hello World!" + name)
+}
+Greet("yao")
+Greet("Eric")
+Greet("Aaron")
+Greet("Vanessa")
+
+//返回值
+//JavaScript函数可以使用return语句将值返回给调用该函数的脚本。
+
+//返回的值可以是任何类型，包括数组和对象。
+
+//当JavaScript到达一条return语句时，该函数将停止执行。
+
+//以下函数采用一个称为数字的参数，并返回乘以自身的参数（即数字）：
+function square(a){
+    return a*a;
+}
+
+var b = square(5) //to assign the return value to b 
+console.log(b)
+console.log(square(5))
+square(5) //mo console.log
