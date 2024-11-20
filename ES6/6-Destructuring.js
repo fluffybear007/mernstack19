@@ -10,6 +10,8 @@
 // let Session2 = sessionsList[1]
 // let Session3 = sessionsList[2]
 
+// let[Session1, Session2, Session3, Session4, Session5, Session6, Session7] = ["AWS", "MERNStack", "JAVA", "DSA", "Data Analytics", "AI-ML"] //sessionsList
+
 
 //do read and map data for Session1,2,3 the same time,
 //initialize 3 variables 3 times

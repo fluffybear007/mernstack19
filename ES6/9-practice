@@ -1,0 +1,23 @@
+//Createt two examples of your own choice to make a map and a weak map
+// and a list of unique names of 10 states of your favorate country you wish to visit on world tour
+
+//1. strong map
+let mapObj= new Map()
+
+mapObj.set(1,"Yao")
+mapObj.set(2,"Ben")
+mapObj.set(3,"William")
+mapObj.set(4,"Wendy")
+console.log(mapObj.size)
+console.log(mapObj.entries())
+
+//2. weak map
+
+let keyString='A', keyObj={}, keyFun=function(){}
+
+mapObj.set(keyString, "set keyStr value to hello")
+mapObj.set(keyObj, "set keyObj value to object")
+mapObj.set(keyFun, "set keyStr value to function")
+console.log(mapObj.size)
+console.log(mapObj.entries())
+console.log(mapObj.get({}))

@@ -1,0 +1,11 @@
+var n=999
+function f1(){
+    var a = n*2
+return a //return 就是一个函数的结果是啥， 如果没有结果，计算机就不知道你说的是啥--undefined
+alert(1);
+}
+console.log(f1())
+
+var test = new f1()
+console.log(test)
+console.log(test.constructor)

@@ -1,0 +1,30 @@
+//function can read the glabla variable 
+// var n=999
+// function f1(){
+//     return n*2
+// }
+// console.log(f1())
+// console.log(f1)
+
+//outside can not read the local variable
+// function f2(){
+//     var a =2
+// }
+// console.log(a)
+
+//函数里的函数（closure） 是为了调用第一个函数的内部变量
+function f1(){
+    var a =2
+ function f2(){
+       return a*2*3.14 //f3的结果
+}   
+ return f2() //f2的结果
+
+}
+console.log(f1()) //看f2的结果 因为有了必包才能看到a的值，
+                  //在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。
+
+//closure的用途有两个，一个是读取函数内部的变量， 另一个是让这些变量始终保持在内存中
+//应为调用f2就要依赖于f1, 所以f1不会被gabage collection
+
+
